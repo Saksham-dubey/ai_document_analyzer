@@ -1,0 +1,43 @@
+2025-03-21 20:22:45,666 - INFO - Initialized PDFProcessor
+2025-03-21 20:23:04,602 - INFO - Starting cleanup of files
+2025-03-21 20:23:16,448 - INFO - Successfully cleaned up 7 files
+2025-03-21 20:23:16,452 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\10.46997revecuatneurol30300026.pdf
+2025-03-21 20:23:16,453 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 20:23:16,455 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\REN-Vol31_n1_06.pdf
+2025-03-21 20:23:16,457 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s40292-021-00481-7.pdf
+2025-03-21 20:23:16,457 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s41467-020-15799-4.pdf
+2025-03-21 20:23:16,459 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s41467-021-22444-1.pdf
+2025-03-21 20:23:16,460 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s41586-022-05580-6.pdf
+2025-03-21 20:23:16,462 - INFO - Deleted 7 PDF files and removed empty PDF directory
+2025-03-21 20:23:26,880 - INFO - Starting cleanup of files
+2025-03-21 20:23:27,400 - INFO - Successfully cleaned up 0 files
+2025-03-21 20:23:28,435 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 20:23:28,439 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2
+2025-03-21 20:23:28,441 - INFO - Found 0 PDF files
+2025-03-21 20:23:30,973 - INFO - Starting cleanup of files
+2025-03-21 20:23:31,371 - INFO - Successfully cleaned up 0 files
+2025-03-21 20:23:32,570 - INFO - Attempting to download: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 20:23:32,810 - ERROR - HTTP Error for https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020: 403 Client Error: Forbidden for url: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 20:23:32,812 - ERROR - Access forbidden - might require authentication
+2025-03-21 20:23:32,815 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/05/REN-Vol31_n1_06.pdf
+2025-03-21 20:23:39,753 - INFO - Successfully downloaded: REN-Vol31_n1_06.pdf
+2025-03-21 20:23:39,755 - INFO - Attempting to download: https://www.nature.com/articles/s41467-020-15799-4.pdf
+2025-03-21 20:23:46,688 - INFO - Successfully downloaded: s41467-020-15799-4.pdf
+2025-03-21 20:23:46,690 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/01/10.46997revecuatneurol30300026.pdf
+2025-03-21 20:23:52,511 - INFO - Successfully downloaded: 10.46997revecuatneurol30300026.pdf
+2025-03-21 20:23:52,513 - INFO - Attempting to download: https://link.springer.com/content/pdf/10.1007/s40292-021-00481-7.pdf
+2025-03-21 20:23:58,843 - INFO - Successfully downloaded: s40292-021-00481-7.pdf
+2025-03-21 20:23:58,846 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2023/02/2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 20:24:05,279 - INFO - Successfully downloaded: 2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 20:24:05,279 - INFO - Successfully downloaded 5 PDFs
+2025-03-21 20:24:05,281 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2
+2025-03-21 20:24:05,287 - INFO - Found 5 PDF files
+2025-03-21 20:24:05,288 - INFO - Starting upload of 5 PDFs
+2025-03-21 20:24:27,528 - INFO - Starting cleanup of files
+2025-03-21 20:24:34,989 - INFO - Successfully cleaned up 5 files
+2025-03-21 20:24:34,990 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\10.46997revecuatneurol30300026.pdf
+2025-03-21 20:24:34,992 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 20:24:34,994 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\REN-Vol31_n1_06.pdf
+2025-03-21 20:24:34,995 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s40292-021-00481-7.pdf
+2025-03-21 20:24:34,997 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Quer-PDF-local\PDF_2\s41467-020-15799-4.pdf
+2025-03-21 20:24:34,997 - INFO - Deleted 5 PDF files and removed empty PDF directory

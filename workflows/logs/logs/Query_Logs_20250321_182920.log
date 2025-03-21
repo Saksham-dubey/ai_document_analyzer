@@ -1,0 +1,20 @@
+2025-03-21 18:29:23,083 - INFO - Initialized PDFProcessor
+2025-03-21 18:29:23,875 - INFO - Starting cleanup of files
+2025-03-21 18:29:24,703 - INFO - Successfully cleaned up 0 files
+2025-03-21 18:29:24,704 - INFO - Deleted 0 PDF files and removed empty PDF directory
+2025-03-21 18:29:33,372 - INFO - Attempting to download: http://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:29:33,640 - ERROR - HTTP Error for http://www.annalsofoncology.org/article/S0923753420360580/pdf: 403 Client Error: Forbidden for url: https://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:29:33,642 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:29:33,643 - INFO - Attempting to download: https://www.nature.com/articles/s41586-022-05580-6.pdf
+2025-03-21 18:29:46,491 - INFO - Successfully downloaded: s41586-022-05580-6.pdf
+2025-03-21 18:29:46,491 - INFO - Attempting to download: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:29:46,638 - ERROR - HTTP Error for https://www.cell.com/article/S153561082200513X/pdf: 403 Client Error: Forbidden for url: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:29:46,638 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:29:46,638 - INFO - Attempting to download: https://www.nature.com/articles/s41467-021-22444-1.pdf
+2025-03-21 18:29:50,316 - INFO - Successfully downloaded: s41467-021-22444-1.pdf
+2025-03-21 18:29:50,316 - INFO - Successfully downloaded 2 PDFs
+2025-03-21 18:29:50,316 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:29:50,316 - INFO - Found 2 PDF files
+2025-03-21 18:29:50,316 - INFO - Starting upload of 2 PDFs
+2025-03-21 18:32:11,176 - INFO - Starting cleanup of files
+2025-03-21 18:32:12,568 - INFO - Successfully cleaned up 2 files

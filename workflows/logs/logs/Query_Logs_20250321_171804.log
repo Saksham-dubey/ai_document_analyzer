@@ -1,0 +1,10 @@
+2025-03-21 17:18:05,612 - INFO - Initialized PDFProcessor
+2025-03-21 17:18:13,357 - INFO - Starting cleanup of files
+2025-03-21 17:18:14,577 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:18:14,577 - INFO - PDF directory does not exist at C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:18:25,576 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 17:18:25,576 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:18:25,576 - INFO - Found 0 PDF files
+2025-03-21 17:18:25,576 - INFO - Starting upload of 0 PDFs
+2025-03-21 17:21:01,428 - INFO - Starting cleanup of files
+2025-03-21 17:21:02,194 - INFO - Successfully cleaned up 0 files

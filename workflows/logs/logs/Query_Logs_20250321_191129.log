@@ -1,0 +1,33 @@
+2025-03-21 19:11:31,802 - INFO - Initialized PDFProcessor
+2025-03-21 19:11:35,948 - INFO - Starting cleanup of files
+2025-03-21 19:11:36,717 - INFO - Successfully cleaned up 0 files
+2025-03-21 19:11:36,717 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\10.46997revecuatneurol30300026.pdf
+2025-03-21 19:11:36,717 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 19:11:36,717 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\REN-Vol31_n1_06.pdf
+2025-03-21 19:11:36,717 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s40292-021-00481-7.pdf
+2025-03-21 19:11:36,726 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41467-020-15799-4.pdf
+2025-03-21 19:11:36,726 - INFO - Deleted 5 PDF files and removed empty PDF directory
+2025-03-21 19:11:44,528 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 19:11:44,529 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 19:11:44,529 - INFO - Found 0 PDF files
+2025-03-21 19:11:48,230 - INFO - Attempting to download: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 19:11:48,385 - ERROR - HTTP Error for https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020: 403 Client Error: Forbidden for url: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 19:11:48,393 - ERROR - Access forbidden - might require authentication
+2025-03-21 19:11:48,393 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/05/REN-Vol31_n1_06.pdf
+2025-03-21 19:11:52,343 - INFO - Successfully downloaded: REN-Vol31_n1_06.pdf
+2025-03-21 19:11:52,344 - INFO - Attempting to download: https://www.nature.com/articles/s41467-020-15799-4.pdf
+2025-03-21 19:11:57,357 - INFO - Successfully downloaded: s41467-020-15799-4.pdf
+2025-03-21 19:11:57,357 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/01/10.46997revecuatneurol30300026.pdf
+2025-03-21 19:12:02,206 - INFO - Successfully downloaded: 10.46997revecuatneurol30300026.pdf
+2025-03-21 19:12:02,206 - INFO - Attempting to download: https://link.springer.com/content/pdf/10.1007/s40292-021-00481-7.pdf
+2025-03-21 19:12:08,726 - INFO - Successfully downloaded: s40292-021-00481-7.pdf
+2025-03-21 19:12:08,726 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2023/02/2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 19:12:15,272 - INFO - Successfully downloaded: 2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 19:12:15,272 - INFO - Successfully downloaded 5 PDFs
+2025-03-21 19:12:15,272 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 19:12:15,272 - INFO - Found 5 PDF files
+2025-03-21 19:12:15,272 - INFO - Starting upload of 5 PDFs
+2025-03-21 19:12:41,722 - INFO - Processing query: What are in the documents?
+2025-03-21 19:13:00,227 - INFO - Successfully processed query
+2025-03-21 19:13:05,842 - INFO - Starting cleanup of files
+2025-03-21 19:13:13,232 - INFO - Successfully cleaned up 5 files

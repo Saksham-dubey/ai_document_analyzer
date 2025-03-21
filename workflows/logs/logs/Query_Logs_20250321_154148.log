@@ -1,0 +1,61 @@
+2025-03-21 15:41:49,048 - ERROR - Error loading Snowflake JSON file: getenv() missing 1 required positional argument: 'key'
+2025-03-21 15:43:27,825 - ERROR - Error loading  JSON file: getenv() missing 1 required positional argument: 'key'
+2025-03-21 15:45:49,348 - ERROR - Error executing query: 'function' object has no attribute 'connect'
+2025-03-21 15:58:01,408 - ERROR - Error executing query: (psycopg2.errors.UndefinedColumn) column "GRAIL" does not exist
+LINE 1: ...feed".entity_id WHERE "darvin_pro"."entity"."name" = "GRAIL"
+                                                                ^
+
+[SQL: SELECT "darvin_pro"."entity".*,"darvin_pro"."publications_feed".* FROM "darvin_pro"."entity" LEFT JOIN "darvin_pro"."publications_feed" ON "darvin_pro"."entity".entity_id = "darvin_pro"."publications_feed".entity_id WHERE "darvin_pro"."entity"."name" = "GRAIL"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-21 15:59:50,302 - ERROR - Error executing query: (psycopg2.errors.UndefinedColumn) column "Dxcover" does not exist
+LINE 1: ...ed".entity_id WHERE "darvin_pro"."entity"."name" = "Dxcover"
+                                                              ^
+
+[SQL: SELECT "darvin_pro"."entity".*,"darvin_pro"."publications_feed".* FROM "darvin_pro"."entity" LEFT JOIN "darvin_pro"."publications_feed" ON "darvin_pro"."entity".entity_id = "darvin_pro"."publications_feed".entity_id WHERE "darvin_pro"."entity"."name" = "Dxcover"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-21 16:01:30,730 - ERROR - Error executing query: (psycopg2.errors.UndefinedColumn) column "Dxcover" does not exist
+LINE 1: ..."."entity_id" WHERE "darvin_pro"."entity"."name" = "Dxcover"
+                                                              ^
+
+[SQL: SELECT "darvin_pro"."entity".*,"darvin_pro"."publications_feed".* FROM "darvin_pro"."entity" LEFT JOIN "darvin_pro"."publications_feed" ON "darvin_pro"."entity"."entity_id" = "darvin_pro"."publications_feed"."entity_id" WHERE "darvin_pro"."entity"."name" = "Dxcover"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-21 16:06:01,791 - ERROR - Error executing query: (psycopg2.errors.FeatureNotSupported) cross-database references are not implemented: darvin_pro.entity.name
+
+[SQL: SELECT "darvin_pro"."entity".*,"darvin_pro"."publications_feed".* FROM "darvin_pro"."entity" LEFT JOIN "darvin_pro"."publications_feed" ON "darvin_pro"."entity"."entity_id" = "darvin_pro"."publications_feed"."entity_id" WHERE "darvin_pro"."entity"."name" 'Dxcover';]
+(Background on this error at: https://sqlalche.me/e/20/tw8g)
+2025-03-21 16:22:16,561 - ERROR - Error downloading PDF from None: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-03-21 16:22:17,439 - ERROR - Error downloading PDF from https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-21 16:22:17,827 - ERROR - Error downloading PDF from https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:22:17,827 - INFO - Downloaded 0 PDFs
+2025-03-21 16:23:37,910 - ERROR - Error downloading PDF from None: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+2025-03-21 16:23:39,300 - ERROR - Error downloading PDF from https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-21 16:23:39,447 - ERROR - Error downloading PDF from https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:23:39,447 - INFO - Downloaded 0 PDFs
+2025-03-21 16:24:08,128 - ERROR - Error downloading PDF from https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-21 16:24:08,244 - ERROR - Error downloading PDF from https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:24:08,244 - INFO - Downloaded 0 PDFs
+2025-03-21 16:26:03,667 - INFO - Attempting to download: https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g
+2025-03-21 16:26:05,724 - INFO - Successfully downloaded: document_0.pdf
+2025-03-21 16:26:05,725 - INFO - Attempting to download: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:26:05,832 - ERROR - HTTP Error for https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:26:05,832 - ERROR - Access forbidden - might require authentication
+2025-03-21 16:26:05,832 - INFO - Successfully downloaded 1 PDFs
+2025-03-21 16:27:29,560 - INFO - Attempting to download: https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g
+2025-03-21 16:27:32,758 - INFO - Successfully downloaded: document_0.pdf
+2025-03-21 16:27:32,759 - INFO - Attempting to download: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:27:33,073 - ERROR - HTTP Error for https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:27:33,075 - ERROR - Access forbidden - might require authentication
+2025-03-21 16:27:33,076 - INFO - Successfully downloaded 1 PDFs
+2025-03-21 16:27:52,876 - INFO - Attempting to download: https://pubs.rsc.org/en/content/articlepdf/2023/an/d3an00669g
+2025-03-21 16:27:55,084 - INFO - Successfully downloaded: document_0.pdf
+2025-03-21 16:27:55,085 - INFO - Attempting to download: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:27:55,203 - ERROR - HTTP Error for https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972: 403 Client Error: Forbidden for url: https://pubs.acs.org/doi/pdf/10.1021/acssensors.1c00972
+2025-03-21 16:27:55,203 - ERROR - Access forbidden - might require authentication
+2025-03-21 16:27:55,203 - INFO - Successfully downloaded 1 PDFs
+2025-03-21 16:30:19,780 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\del-brutto-et-al-2022-high-social-risk-influence-progression-of-white-matter-hyperintensities-of-presumed-vascular.pdf
+2025-03-21 16:30:19,781 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\document_0.pdf
+2025-03-21 16:30:19,782 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\gim201769.pdf
+2025-03-21 16:30:19,783 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\Journal of Genetic Counseling - 2017 - Ghiossi - Clinical Utility of Expanded Carrier Screening  Reproductive Behaviors of.pdf
+2025-03-21 16:30:19,785 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\nihms-1055853.pdf
+2025-03-21 16:30:19,806 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\putcha-et-al-2021-multicancer-screening-one-size-does-not-fit-all.pdf
+2025-03-21 16:30:19,812 - INFO - Deleted 7 PDF files and removed empty PDF directory

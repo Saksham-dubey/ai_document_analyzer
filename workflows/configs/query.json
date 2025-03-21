@@ -1,0 +1,6 @@
+{
+    
+    "get_table": "SELECT * FROM \"{schema}\".\"{table_name}\";",
+    "join_table_left": "SELECT \"{schema}\".\"{table_1}\".*,\"{schema}\".\"{table_2}\".* FROM \"{schema}\".\"{table_1}\" LEFT JOIN \"{schema}\".\"{table_2}\" ON \"{schema}\".\"{table_1}\".\"{join_column}\" = \"{schema}\".\"{table_2}\".\"{join_column}\" WHERE \"{schema}\".\"{table_1}\".\"{column_name}\" ='{value}';",
+    "get_distinct_values": "SELECT DISTINCT {column_name} FROM \"{schema}\".\"{table_name}\" WHERE \"{schema}\".\"{table_name}\".\"{column_name_1}\" ='{value}' ;"
+  }

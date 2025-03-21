@@ -1,0 +1,5 @@
+2025-03-21 09:34:47,558 - INFO - Initialized PDFProcessor
+2025-03-21 09:34:47,562 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF
+2025-03-21 09:34:47,577 - INFO - Found 6 PDF files
+2025-03-21 09:34:47,577 - INFO - Starting upload of 6 PDFs
+2025-03-21 09:34:55,735 - ERROR - Error uploading PDFs: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************3ZYA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

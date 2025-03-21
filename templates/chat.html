@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Chat</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #0984e3;
+            --accent-color: #00cec9;
+            --background-color: #1a1a1a;
+            --chat-bg: #2d3436;
+            --user-message-bg: #0984e3;
+            --bot-message-bg: #2d3436;
+            --text-color: #dfe6e9;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(9, 132, 227, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(0, 206, 201, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--chat-bg);
+            margin: 15% auto;
+            padding: 25px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,206,201,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .company-list {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .company-item {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-item:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+
+        .company-item i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        /* Chat Interface Styles */
+        .chat-container {
+            background-color: var(--chat-bg);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,206,201,0.2);
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 20px;
+            background-color: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            flex: 1;
+        }
+
+        .chat-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-header i {
+            color: var(--accent-color);
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: linear-gradient(160deg, rgba(9,132,227,0.05) 0%, rgba(0,206,201,0.05) 100%);
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            word-wrap: break-word;
+            animation: messageSlide 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .user-message {
+            background-color: var(--user-message-bg);
+            margin-left: auto;
+            border-radius: 15px 15px 0 15px;
+        }
+
+        .bot-message {
+            background-color: var(--bot-message-bg);
+            margin-right: auto;
+            border-radius: 15px 15px 15px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .bot-message pre {
+            background-color: #282c34;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .bot-message code {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background-color: rgba(255,255,255,0.05);
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        #queryInput {
+            flex-grow: 1;
+            padding: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-color);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #queryInput:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(0,206,201,0.2);
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            display: none;
+            color: var(--accent-color);
+        }
+
+        .loading i {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        #selectedCompany {
+            font-size: 0.9em;
+            color: var(--accent-color);
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Markdown Styles */
+        .markdown-content {
+            line-height: 1.6;
+        }
+
+        .markdown-content h1,
+        .markdown-content h2,
+        .markdown-content h3 {
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            color: var(--accent-color);
+        }
+
+        .markdown-content p {
+            margin-bottom: 1em;
+        }
+
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .markdown-content code {
+            background-color: rgba(255,255,255,0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .markdown-content pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .loading-content {
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid var(--accent-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .loading-progress {
+            font-size: 1em;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .switch-company-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .switch-company-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .switch-company-btn i {
+            font-size: 1em;
+        }
+
+        /* Make the button responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .switch-company-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .search-container {
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        #companySearch {
+            width: 100%;
+            padding: 12px 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-color);
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        #companySearch:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px rgba(0,206,201,0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            color: var(--accent-color);
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 15px;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .clear-search:hover {
+            color: var(--accent-color);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-color);
+            font-size: 0.9em;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .no-results i {
+            display: block;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .company-item {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 0.3s ease;
+        }
+
+        .company-item.hidden {
+            display: none;
+        }
+
+        .company-item.visible {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Make the search responsive */
+        @media (max-width: 768px) {
+            #companySearch {
+                font-size: 0.9em;
+                padding: 10px 35px;
+            }
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-decoration: none; /* Remove underline from anchor tag */
+        }
+
+        .header-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .home-btn {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .home-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Update responsive styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .header-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Company Selection Modal -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-building"></i> Select a Company</h2>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="companySearch" 
+                        placeholder="Search company..."
+                        autocomplete="off"
+                    >
+                    <i class="fas fa-times clear-search" id="clearSearch" style="display: none;"></i>
+                </div>
+            </div>
+            <div class="company-list" id="companyList"></div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search-minus"></i>
+                No companies found matching your search
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this new loading overlay right after the modal div -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Processing Company Documents...</div>
+            <div class="loading-progress">This may take a few moments</div>
+        </div>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-content">
+                    <div class="header-left">
+                        <h2><i class="fas fa-robot"></i> AI Document Assistant</h2>
+                        <div id="selectedCompany"></div>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="/" class="header-btn home-btn">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <button id="switchCompanyBtn" class="header-btn switch-company-btn" onclick="showCompanySelector()">
+                            <i class="fas fa-exchange-alt"></i>
+                            Switch Company
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <div class="loading" id="loading">
+                <i class="fas fa-circle-notch fa-2x"></i>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="queryInput" placeholder="Ask me anything about the company documents..." disabled>
+                <button onclick="sendQuery()" id="sendButton" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCompany = '';
+        marked.setOptions({
+            highlight: function(code, language) {
+                if (language && hljs.getLanguage(language)) {
+                    return hljs.highlight(code, { language: language }).value;
+                }
+                return hljs.highlightAuto(code).value;
+            },
+            breaks: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setupSearchFunctionality();
+            showCompanySelector();
+        });
+
+        async function showCompanySelector() {
+            try {
+                document.getElementById('chatMessages').innerHTML = '';
+                document.getElementById('queryInput').disabled = true;
+                document.getElementById('sendButton').disabled = true;
+                
+                const response = await fetch('/get_companies');
+                const data = await response.json();
+                
+                const modal = document.getElementById('companyModal');
+                const companyList = document.getElementById('companyList');
+                const searchInput = document.getElementById('companySearch');
+                
+                // Clear previous search
+                searchInput.value = '';
+                document.getElementById('clearSearch').style.display = 'none';
+                document.getElementById('noResults').style.display = 'none';
+                
+                companyList.innerHTML = '';
+                
+                // Store companies in a global variable for filtering
+                window.companies = data.companies;
+                
+                renderCompanyList(data.companies);
+                
+                modal.style.display = 'block';
+                
+                // Focus on search input
+                setTimeout(() => searchInput.focus(), 300);
+                
+                currentCompany = '';
+                document.getElementById('selectedCompany').innerHTML = '';
+            } catch (error) {
+                console.error('Error fetching companies:', error);
+                addMessage('Error loading companies. Please try again.', 'bot');
+            }
+        }
+
+        async function selectCompany(companyName) {
+            try {
+                // Clean up previous company data
+                await cleanupBeforeSwitch();
+                
+                // Show loading overlay
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                loadingOverlay.style.display = 'flex';
+                
+                const response = await fetch('/get_entity_name', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name: companyName })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    document.getElementById('companyModal').style.display = 'none';
+                    document.getElementById('queryInput').disabled = false;
+                    document.getElementById('sendButton').disabled = false;
+                    currentCompany = companyName;
+                    document.getElementById('selectedCompany').innerHTML = 
+                        `<i class="fas fa-check-circle"></i> Selected Company: ${companyName}`;
+                    addMessage(`Documents loaded for ${companyName}. How can I help you?`, 'bot');
+                } else if (data.status === 'no_pdfs') {
+                    // Keep the modal open and show error message
+                    const companyList = document.getElementById('companyList');
+                    
+                    // Add error message at the top of the company list
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'company-error-message';
+                    errorDiv.innerHTML = `
+                        <div style="background-color: rgba(255,0,0,0.1); padding: 15px; margin-bottom: 15px; 
+                                   border-radius: 8px; border: 1px solid rgba(255,0,0,0.2);">
+                            <i class="fas fa-exclamation-circle" style="color: #ff6b6b;"></i>
+                            No documents found for ${companyName}. Please select another company.
+                        </div>
+                    `;
+                    
+                    // Remove any existing error message
+                    const existingError = companyList.querySelector('.company-error-message');
+                    if (existingError) {
+                        existingError.remove();
+                    }
+                    
+                    // Insert error at the top
+                    companyList.insertBefore(errorDiv, companyList.firstChild);
+                    
+                    // Highlight the modal to draw attention
+                    const modalContent = document.querySelector('.modal-content');
+                    modalContent.style.animation = 'shake 0.5s ease-in-out';
+                    setTimeout(() => {
+                        modalContent.style.animation = '';
+                    }, 500);
+                } else {
+                    addMessage(`Error: ${data.message}`, 'bot');
+                }
+            } catch (error) {
+                console.error('Error selecting company:', error);
+                addMessage('Error selecting company. Please try again.', 'bot');
+            } finally {
+                // Hide loading overlay
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }
+        }
+
+        async function sendQuery() {
+            const queryInput = document.getElementById('queryInput');
+            const query = queryInput.value.trim();
+            
+            if (!query) return;
+
+            addMessage(query, 'user');
+            queryInput.value = '';
+            
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+
+            try {
+                const response = await fetch('/process-query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+                addMessage(data.response, 'bot');
+            } catch (error) {
+                console.error('Error processing query:', error);
+                addMessage('Error processing your question. Please try again.', 'bot');
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+
+        function addMessage(text, type) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+            
+            if (type === 'bot') {
+                // Parse markdown for bot messages
+                const markdownContent = document.createElement('div');
+                markdownContent.className = 'markdown-content';
+                markdownContent.innerHTML = marked.parse(text);
+                messageDiv.appendChild(markdownContent);
+                
+                // Apply syntax highlighting to code blocks
+                messageDiv.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+            } else {
+                messageDiv.textContent = text;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        document.getElementById('queryInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendQuery();
+            }
+        });
+
+        // Add cleanup function for when switching companies
+        async function cleanupBeforeSwitch() {
+            try {
+                const response = await fetch('/cleanup', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                if (data.message === 'Cleanup successful') {
+                    console.log('Previous company data cleaned up successfully');
+                }
+            } catch (error) {
+                console.error('Error during cleanup:', error);
+            }
+        }
+
+        // Add these new functions for search functionality
+        function setupSearchFunctionality() {
+            const searchInput = document.getElementById('companySearch');
+            const clearSearch = document.getElementById('clearSearch');
+
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                filterCompanies(searchTerm);
+                clearSearch.style.display = searchTerm ? 'block' : 'none';
+            });
+
+            clearSearch.addEventListener('click', function() {
+                searchInput.value = '';
+                filterCompanies('');
+                this.style.display = 'none';
+                searchInput.focus();
+            });
+
+            // Add keyboard navigation
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    searchInput.value = '';
+                    filterCompanies('');
+                    clearSearch.style.display = 'none';
+                }
+            });
+        }
+
+        function renderCompanyList(companies) {
+            const companyList = document.getElementById('companyList');
+            companyList.innerHTML = '';
+            
+            companies.forEach(company => {
+                const div = document.createElement('div');
+                div.className = 'company-item visible';
+                div.innerHTML = `<i class="fas fa-building"></i> ${company}`;
+                div.onclick = () => selectCompany(company);
+                companyList.appendChild(div);
+            });
+        }
+
+        function filterCompanies(searchTerm) {
+            const companies = window.companies;
+            const filteredCompanies = companies.filter(company => 
+                company.toLowerCase().includes(searchTerm)
+            );
+            
+            renderCompanyList(filteredCompanies);
+            
+            // Show/hide no results message
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = filteredCompanies.length === 0 ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

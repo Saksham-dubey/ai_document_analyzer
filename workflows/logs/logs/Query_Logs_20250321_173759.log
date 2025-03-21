@@ -1,0 +1,22 @@
+2025-03-21 17:38:01,987 - INFO - Initialized PDFProcessor
+2025-03-21 17:38:02,684 - INFO - Starting cleanup of files
+2025-03-21 17:38:04,091 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:38:04,091 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\document_0.pdf
+2025-03-21 17:38:04,091 - INFO - Deleted 1 PDF files and removed empty PDF directory
+2025-03-21 17:38:09,617 - INFO - Attempting to download: https://www.annualreviews.org/doi/pdf/10.1146/annurev-genom-111919-082433
+2025-03-21 17:38:10,668 - ERROR - HTTP Error for https://www.annualreviews.org/doi/pdf/10.1146/annurev-genom-111919-082433: 403 Client Error: Forbidden for url: https://www.annualreviews.org/doi/pdf/10.1146/annurev-genom-111919-082433
+2025-03-21 17:38:10,668 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:38:10,668 - INFO - Attempting to download: https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0208283&type=printable
+2025-03-21 17:38:13,134 - INFO - Successfully downloaded: document_0.pdf
+2025-03-21 17:38:13,134 - INFO - Attempting to download: https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0204265&type=printable
+2025-03-21 17:38:16,852 - INFO - Successfully downloaded: document_1.pdf
+2025-03-21 17:38:16,852 - INFO - Attempting to download: https://www.biorxiv.org/content/biorxiv/early/2018/09/20/422519.full.pdf
+2025-03-21 17:38:19,189 - INFO - Successfully downloaded: 422519.full.pdf
+2025-03-21 17:38:19,189 - INFO - Successfully downloaded 3 PDFs
+2025-03-21 17:38:19,189 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:38:19,189 - INFO - Found 3 PDF files
+2025-03-21 17:38:19,189 - INFO - Starting upload of 3 PDFs
+2025-03-21 17:38:46,753 - INFO - Processing query: What are the documents about
+2025-03-21 17:42:17,498 - ERROR - Error processing query: Error code: 500 - {'error': {'message': 'An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai.com if the error persists. Please include the request ID req_aca48d84e712d7af04e88f1aab862b8b in your message.', 'type': 'server_error', 'param': None, 'code': 'server_error'}}
+2025-03-21 17:42:39,310 - INFO - Starting cleanup of files
+2025-03-21 17:42:42,916 - INFO - Successfully cleaned up 3 files

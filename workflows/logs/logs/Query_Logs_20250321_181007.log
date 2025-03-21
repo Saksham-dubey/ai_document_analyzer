@@ -1,0 +1,42 @@
+2025-03-21 18:10:09,035 - INFO - Initialized PDFProcessor
+2025-03-21 18:10:09,318 - INFO - Starting cleanup of files
+2025-03-21 18:10:10,254 - INFO - Successfully cleaned up 0 files
+2025-03-21 18:10:10,254 - INFO - PDF directory does not exist at C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:10:11,674 - INFO - Starting cleanup of files
+2025-03-21 18:10:12,065 - INFO - Successfully cleaned up 0 files
+2025-03-21 18:10:12,067 - INFO - PDF directory does not exist at C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:10:20,718 - INFO - Attempting to download: http://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:10:20,985 - ERROR - HTTP Error for http://www.annalsofoncology.org/article/S0923753420360580/pdf: 403 Client Error: Forbidden for url: https://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:10:20,985 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:10:20,985 - INFO - Attempting to download: https://www.nature.com/articles/s41586-022-05580-6.pdf
+2025-03-21 18:10:28,745 - INFO - Successfully downloaded: s41586-022-05580-6.pdf
+2025-03-21 18:10:28,745 - INFO - Attempting to download: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:10:28,902 - ERROR - HTTP Error for https://www.cell.com/article/S153561082200513X/pdf: 403 Client Error: Forbidden for url: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:10:28,902 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:10:28,902 - INFO - Attempting to download: https://www.nature.com/articles/s41467-021-22444-1.pdf
+2025-03-21 18:10:32,724 - INFO - Successfully downloaded: s41467-021-22444-1.pdf
+2025-03-21 18:10:32,724 - INFO - Successfully downloaded 2 PDFs
+2025-03-21 18:10:32,724 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:10:32,730 - INFO - Found 2 PDF files
+2025-03-21 18:10:32,730 - INFO - Starting upload of 2 PDFs
+2025-03-21 18:11:10,386 - INFO - Starting cleanup of files
+2025-03-21 18:11:11,835 - INFO - Successfully cleaned up 2 files
+2025-03-21 18:11:11,838 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41467-021-22444-1.pdf
+2025-03-21 18:11:11,842 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41586-022-05580-6.pdf
+2025-03-21 18:11:11,844 - INFO - Deleted 2 PDF files and removed empty PDF directory
+2025-03-21 18:11:18,040 - INFO - Attempting to download: http://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:11:18,253 - ERROR - HTTP Error for http://www.annalsofoncology.org/article/S0923753420360580/pdf: 403 Client Error: Forbidden for url: https://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:11:18,256 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:11:18,256 - INFO - Attempting to download: https://www.nature.com/articles/s41586-022-05580-6.pdf
+2025-03-21 18:11:28,519 - INFO - Successfully downloaded: s41586-022-05580-6.pdf
+2025-03-21 18:11:28,519 - INFO - Attempting to download: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:11:28,792 - ERROR - HTTP Error for https://www.cell.com/article/S153561082200513X/pdf: 403 Client Error: Forbidden for url: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:11:28,796 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:11:28,797 - INFO - Attempting to download: https://www.nature.com/articles/s41467-021-22444-1.pdf
+2025-03-21 18:11:31,578 - ERROR - HTTP Error for https://www.nature.com/articles/s41467-021-22444-1.pdf: 400 Client Error: Bad Request for url: https://www.nature.com/articles/s41467-021-22444-1.pdf
+2025-03-21 18:11:31,593 - INFO - Successfully downloaded 1 PDFs
+2025-03-21 18:11:31,593 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:11:31,593 - INFO - Found 1 PDF files
+2025-03-21 18:11:31,599 - INFO - Starting upload of 1 PDFs
+2025-03-21 18:13:10,606 - INFO - Starting cleanup of files
+2025-03-21 18:13:11,527 - INFO - Successfully cleaned up 1 files

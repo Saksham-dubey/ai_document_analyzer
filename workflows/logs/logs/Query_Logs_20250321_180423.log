@@ -1,0 +1,12 @@
+2025-03-21 18:04:25,681 - INFO - Initialized PDFProcessor
+2025-03-21 18:04:34,517 - INFO - Starting cleanup of files
+2025-03-21 18:04:35,431 - INFO - Successfully cleaned up 0 files
+2025-03-21 18:04:35,431 - INFO - Deleted 0 PDF files and removed empty PDF directory
+2025-03-21 18:05:10,183 - ERROR - Error executing query: (psycopg2.errors.UndefinedColumn) column publications_feed.entity_type does not exist
+LINE 1: ..." ='Galleri MultiCancer Early Detection Test' AND "darvin_pr...
+                                                             ^
+
+[SQL: SELECT "darvin_pro"."entity".*,"darvin_pro"."publications_feed".* FROM "darvin_pro"."entity" LEFT JOIN "darvin_pro"."publications_feed" ON "darvin_pro"."entity"."entity_id" = "darvin_pro"."publications_feed"."entity_id" WHERE "darvin_pro"."entity"."name" ='Galleri MultiCancer Early Detection Test' AND "darvin_pro"."publications_feed"."entity_type" ='Company' ;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-21 18:05:13,888 - INFO - Starting cleanup of files
+2025-03-21 18:05:14,389 - INFO - Successfully cleaned up 0 files

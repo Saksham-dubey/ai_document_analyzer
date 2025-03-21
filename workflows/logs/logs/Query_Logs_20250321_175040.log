@@ -1,0 +1,14 @@
+2025-03-21 17:50:43,744 - INFO - Initialized PDFProcessor
+2025-03-21 17:51:00,254 - INFO - Starting cleanup of files
+2025-03-21 17:51:01,184 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:51:01,184 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\10.46997revecuatneurol30300026.pdf
+2025-03-21 17:51:01,185 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 17:51:01,186 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\REN-Vol31_n1_06.pdf
+2025-03-21 17:51:01,188 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s40292-021-00481-7.pdf
+2025-03-21 17:51:01,189 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41467-020-15799-4.pdf
+2025-03-21 17:51:01,190 - INFO - Deleted 5 PDF files and removed empty PDF directory
+2025-03-21 17:51:05,197 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 17:51:05,197 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:51:05,197 - INFO - Found 0 PDF files
+2025-03-21 17:54:37,746 - INFO - Starting cleanup of files
+2025-03-21 17:54:38,420 - INFO - Successfully cleaned up 0 files

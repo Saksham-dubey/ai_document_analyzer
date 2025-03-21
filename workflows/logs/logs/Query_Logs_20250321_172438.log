@@ -1,0 +1,25 @@
+2025-03-21 17:24:40,830 - INFO - Initialized PDFProcessor
+2025-03-21 17:24:43,288 - INFO - Starting cleanup of files
+2025-03-21 17:24:44,201 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:24:44,201 - INFO - PDF directory does not exist at C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:25:10,163 - INFO - Attempting to download: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 17:25:10,769 - ERROR - HTTP Error for https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020: 403 Client Error: Forbidden for url: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-21 17:25:10,784 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:25:10,785 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/05/REN-Vol31_n1_06.pdf
+2025-03-21 17:25:15,093 - INFO - Successfully downloaded: REN-Vol31_n1_06.pdf
+2025-03-21 17:25:15,094 - INFO - Attempting to download: https://www.nature.com/articles/s41467-020-15799-4.pdf
+2025-03-21 17:25:22,668 - INFO - Successfully downloaded: s41467-020-15799-4.pdf
+2025-03-21 17:25:22,668 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/01/10.46997revecuatneurol30300026.pdf
+2025-03-21 17:25:26,165 - INFO - Successfully downloaded: 10.46997revecuatneurol30300026.pdf
+2025-03-21 17:25:26,165 - INFO - Attempting to download: https://link.springer.com/content/pdf/10.1007/s40292-021-00481-7.pdf
+2025-03-21 17:25:33,043 - INFO - Successfully downloaded: s40292-021-00481-7.pdf
+2025-03-21 17:25:33,059 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2023/02/2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 17:25:36,944 - INFO - Successfully downloaded: 2631-2581-rneuro-31-03-00016.pdf
+2025-03-21 17:25:36,944 - INFO - Successfully downloaded 5 PDFs
+2025-03-21 17:25:36,944 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:25:36,944 - INFO - Found 5 PDF files
+2025-03-21 17:25:36,944 - INFO - Starting upload of 5 PDFs
+2025-03-21 17:26:11,020 - INFO - Processing query: Give me an overview of the paper?
+2025-03-21 17:26:23,627 - INFO - Successfully processed query
+2025-03-21 17:28:54,733 - INFO - Starting cleanup of files
+2025-03-21 17:28:57,773 - INFO - Successfully cleaned up 5 files

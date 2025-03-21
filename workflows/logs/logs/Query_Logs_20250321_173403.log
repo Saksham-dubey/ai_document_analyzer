@@ -1,0 +1,44 @@
+2025-03-21 17:34:05,378 - INFO - Initialized PDFProcessor
+2025-03-21 17:34:08,231 - INFO - Starting cleanup of files
+2025-03-21 17:34:09,151 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:34:09,151 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41467-021-22444-1.pdf
+2025-03-21 17:34:09,158 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41586-022-05580-6.pdf
+2025-03-21 17:34:09,160 - INFO - Deleted 2 PDF files and removed empty PDF directory
+2025-03-21 17:34:18,325 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 17:34:18,328 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:34:18,329 - INFO - Found 0 PDF files
+2025-03-21 17:34:19,754 - INFO - Starting cleanup of files
+2025-03-21 17:34:21,010 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:34:21,010 - INFO - Deleted 0 PDF files and removed empty PDF directory
+2025-03-21 17:34:22,720 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 17:34:22,720 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:34:22,720 - INFO - Found 0 PDF files
+2025-03-21 17:34:23,785 - INFO - Starting cleanup of files
+2025-03-21 17:34:24,667 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:34:24,670 - INFO - Deleted 0 PDF files and removed empty PDF directory
+2025-03-21 17:34:26,511 - WARNING - No PDFs were successfully downloaded!
+2025-03-21 17:34:26,513 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:34:26,513 - INFO - Found 0 PDF files
+2025-03-21 17:34:27,514 - INFO - Starting cleanup of files
+2025-03-21 17:34:28,395 - INFO - Successfully cleaned up 0 files
+2025-03-21 17:34:28,397 - INFO - Deleted 0 PDF files and removed empty PDF directory
+2025-03-21 17:34:31,172 - INFO - Attempting to download: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/all.16043
+2025-03-21 17:34:31,778 - ERROR - HTTP Error for https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/all.16043: 403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/all.16043
+2025-03-21 17:34:31,778 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:34:31,778 - INFO - Attempting to download: https://www.frontiersin.org/articles/10.3389/fimmu.2023.1268686/pdf?isPublishedV2=False
+2025-03-21 17:34:35,561 - INFO - Successfully downloaded: document_0.pdf
+2025-03-21 17:34:35,561 - INFO - Attempting to download: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajh.27119
+2025-03-21 17:34:35,778 - ERROR - HTTP Error for https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajh.27119: 403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajh.27119
+2025-03-21 17:34:35,778 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:34:35,778 - INFO - Attempting to download: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cyto.b.22143
+2025-03-21 17:34:35,963 - ERROR - HTTP Error for https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cyto.b.22143: 403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cyto.b.22143
+2025-03-21 17:34:35,963 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:34:35,970 - INFO - Attempting to download: https://www.mdpi.com/2072-6694/14/8/2011/pdf?version=1650027448
+2025-03-21 17:34:36,345 - ERROR - HTTP Error for https://www.mdpi.com/2072-6694/14/8/2011/pdf?version=1650027448: 403 Client Error: Forbidden for url: https://www.mdpi.com/2072-6694/14/8/2011/pdf?version=1650027448
+2025-03-21 17:34:36,345 - ERROR - Access forbidden - might require authentication
+2025-03-21 17:34:36,345 - INFO - Successfully downloaded 1 PDFs
+2025-03-21 17:34:36,345 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 17:34:36,345 - INFO - Found 1 PDF files
+2025-03-21 17:34:36,361 - INFO - Starting upload of 1 PDFs
+2025-03-21 17:37:41,095 - INFO - Starting cleanup of files
+2025-03-21 17:37:42,082 - INFO - Successfully cleaned up 1 files

@@ -1,0 +1,22 @@
+2025-03-21 18:32:18,439 - INFO - Initialized PDFProcessor
+2025-03-21 18:32:29,663 - INFO - Starting cleanup of files
+2025-03-21 18:32:30,709 - INFO - Successfully cleaned up 0 files
+2025-03-21 18:32:30,711 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41467-021-22444-1.pdf
+2025-03-21 18:32:30,711 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2\s41586-022-05580-6.pdf
+2025-03-21 18:32:30,717 - INFO - Deleted 2 PDF files and removed empty PDF directory
+2025-03-21 18:32:38,511 - INFO - Attempting to download: http://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:32:38,855 - ERROR - HTTP Error for http://www.annalsofoncology.org/article/S0923753420360580/pdf: 403 Client Error: Forbidden for url: https://www.annalsofoncology.org/article/S0923753420360580/pdf
+2025-03-21 18:32:38,855 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:32:38,855 - INFO - Attempting to download: https://www.nature.com/articles/s41586-022-05580-6.pdf
+2025-03-21 18:32:48,259 - INFO - Successfully downloaded: s41586-022-05580-6.pdf
+2025-03-21 18:32:48,260 - INFO - Attempting to download: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:32:48,612 - ERROR - HTTP Error for https://www.cell.com/article/S153561082200513X/pdf: 403 Client Error: Forbidden for url: https://www.cell.com/article/S153561082200513X/pdf
+2025-03-21 18:32:48,614 - ERROR - Access forbidden - might require authentication
+2025-03-21 18:32:48,614 - INFO - Attempting to download: https://www.nature.com/articles/s41467-021-22444-1.pdf
+2025-03-21 18:32:54,274 - INFO - Successfully downloaded: s41467-021-22444-1.pdf
+2025-03-21 18:32:54,274 - INFO - Successfully downloaded 2 PDFs
+2025-03-21 18:32:54,274 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\Query-PDF\PDF_2
+2025-03-21 18:32:54,278 - INFO - Found 2 PDF files
+2025-03-21 18:32:54,278 - INFO - Starting upload of 2 PDFs
+2025-03-21 18:39:13,302 - INFO - Starting cleanup of files
+2025-03-21 18:39:14,900 - INFO - Successfully cleaned up 2 files
