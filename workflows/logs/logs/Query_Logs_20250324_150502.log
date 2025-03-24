@@ -1,0 +1,29 @@
+2025-03-24 15:05:04,817 - INFO - Initialized PDFProcessor
+2025-03-24 15:05:29,518 - INFO - Starting cleanup of files
+2025-03-24 15:05:30,421 - INFO - Successfully cleaned up 0 files
+2025-03-24 15:05:30,431 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\AI-Document-Analyzer\PDF_2\s41467-021-22444-1.pdf
+2025-03-24 15:05:30,435 - INFO - Deleted: C:\Users\saksham.dubey\Desktop\Decibio\Ideation\AI-Document-Analyzer\PDF_2\s41586-022-05580-6.pdf
+2025-03-24 15:05:30,437 - INFO - Deleted 2 PDF files and removed empty PDF directory
+2025-03-24 15:05:39,305 - INFO - Starting cleanup of files
+2025-03-24 15:05:39,748 - INFO - Successfully cleaned up 0 files
+2025-03-24 15:05:40,797 - INFO - Attempting to download: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-24 15:05:40,951 - ERROR - HTTP Error for https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020: 403 Client Error: Forbidden for url: https://www.ahajournals.org/doi/pdf/10.1161/STROKEAHA.122.042020
+2025-03-24 15:05:40,953 - ERROR - Access forbidden - might require authentication
+2025-03-24 15:05:40,953 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/05/REN-Vol31_n1_06.pdf
+2025-03-24 15:05:44,214 - INFO - Successfully downloaded: REN-Vol31_n1_06.pdf
+2025-03-24 15:05:44,214 - INFO - Attempting to download: https://www.nature.com/articles/s41467-020-15799-4.pdf
+2025-03-24 15:05:51,533 - INFO - Successfully downloaded: s41467-020-15799-4.pdf
+2025-03-24 15:05:51,533 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2022/01/10.46997revecuatneurol30300026.pdf
+2025-03-24 15:05:54,550 - INFO - Successfully downloaded: 10.46997revecuatneurol30300026.pdf
+2025-03-24 15:05:54,550 - INFO - Attempting to download: https://link.springer.com/content/pdf/10.1007/s40292-021-00481-7.pdf
+2025-03-24 15:06:00,704 - INFO - Successfully downloaded: s40292-021-00481-7.pdf
+2025-03-24 15:06:00,704 - INFO - Attempting to download: http://revecuatneurol.com/wp-content/uploads/2023/02/2631-2581-rneuro-31-03-00016.pdf
+2025-03-24 15:06:04,236 - INFO - Successfully downloaded: 2631-2581-rneuro-31-03-00016.pdf
+2025-03-24 15:06:04,236 - INFO - Successfully downloaded 5 PDFs
+2025-03-24 15:06:04,236 - INFO - Listing PDF files in C:\Users\saksham.dubey\Desktop\Decibio\Ideation\AI-Document-Analyzer\PDF_2
+2025-03-24 15:06:04,236 - INFO - Found 5 PDF files
+2025-03-24 15:06:04,236 - INFO - Starting upload of 5 PDFs
+2025-03-24 15:07:06,096 - INFO - Processing query: What is the association between pineal gland calcification and intracranial atherosclerotic disease in older adults?
+2025-03-24 15:07:23,483 - INFO - Successfully processed query
+2025-03-24 15:08:22,772 - INFO - Starting cleanup of files
+2025-03-24 15:08:25,447 - INFO - Successfully cleaned up 5 files

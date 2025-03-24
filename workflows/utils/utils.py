@@ -74,7 +74,7 @@ def download_pdfs_from_urls(pdf_urls_list, folder_directory):
             parsed_url = urlparse(url)
             filename = os.path.basename(parsed_url.path)
             if not filename.endswith('.pdf'):
-                filename = f"document_{len(downloaded_files)}.pdf"
+                filename = f"{os.path.splitext(filename)[0]}_downloaded_{len(downloaded_files)}.pdf"
             
             # Ensure filename is valid
             filename = ''.join(c for c in filename if c.isalnum() or c in '._- ')

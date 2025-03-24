@@ -39,7 +39,7 @@ def fetch_and_download_pdfs(entity_name: str, pdf_directory: str = None) -> None
     # Download PDFs
     download_pdfs_from_urls(pdf_urls_list=url_list, folder_directory=pdf_directory)
 
-if __name__ == "__main__":
-    # Example usage
-    fetch_and_download_pdfs("Dxcover")
+# if __name__ == "__main__":
+#     # Example usage
+#     fetch_and_download_pdfs("Dxcover")
 
